@@ -1,8 +1,8 @@
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useState } from "react";
-import styles from "../styles/navbar1.module.css";
+import styles from "../styles/navbar2.module.css";
 
-const Navbar1 = () => {
+const Navbar2 = () => {
   const [isOpen, setIsOpen] = useState(true);
 
   const showNavbar = () => {
@@ -11,7 +11,7 @@ const Navbar1 = () => {
   };
   return (
     <header className={styles.container}>
-      <h3 className={styles.logo}>Logo1.</h3>
+      <h3 className={styles.logo}>Logo2.</h3>
       <nav
         className={`${
           isOpen ? styles.menuList : `${styles.menuList} ${styles.menuListOpen}`
@@ -44,4 +44,4 @@ const Navbar1 = () => {
   );
 };
 
-export default Navbar1;
+export default Navbar2;
