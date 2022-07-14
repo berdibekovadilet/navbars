@@ -1,17 +1,22 @@
 import styles from "../styles/navbar1.module.css";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { useRef } from "react";
+import { useState } from "react";
 
 const Navbar1 = () => {
-  const navRef = useRef();
+  const [isOpen, setIsOpen] = useState(true);
 
   const showNavbar = () => {
-    navRef.current.classList.toggle("responsiveNav");
+    isOpen && setIsOpen(false);
+    !isOpen && setIsOpen(true);
   };
   return (
     <header className={styles.container}>
       <h3 className={styles.logo}>Logo.</h3>
-      <nav ref={navRef} className={styles.menuList}>
+      <nav
+        className={`${
+          isOpen ? styles.menuList : `${styles.menuList} ${styles.menuListOpen}`
+        } `}
+      >
         <a className={styles.listItem} href="#/">
           item 1
         </a>
@@ -31,6 +36,7 @@ const Navbar1 = () => {
           <FaTimes />
         </button>
       </nav>
+
       <button className={styles.navBtn} onClick={showNavbar}>
         <FaBars />
       </button>

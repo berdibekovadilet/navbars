@@ -15,11 +15,11 @@
 .listItem {
   margin: 0 2rem;
   color: white;
-  text-decoration: none;
+  /* text-decoration: none; */
 }
 
 .listItem:hover {
-  color: royalblue;
+  color: rgb(38, 39, 44);
 }
 
 .navBtn {
@@ -55,7 +55,7 @@
     transition: 1s;
     transform: translateY(-100vh);
   }
-  .responsiveNav {
+  .menuListOpen {
     transform: none;
   }
 
