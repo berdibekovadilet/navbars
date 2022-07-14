@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.menuList {
+  width: 200px;
+}
